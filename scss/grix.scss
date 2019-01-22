@@ -13,13 +13,15 @@
         box-sizing: border-box;
         padding: 0 24px;
         flex-grow: 1;
+
+        &[class*="-sm"]{
+            flex-grow: 0;
+        }
     }
 
-    /* loop through 12 columns */
     @for $i from 1 through 12 {
         .col-#{$i},
         [class*="col-"].col-#{$i}-sm {
-            flex-grow: 0;
             width: decimal-ceil(percentage($i / 12), 4);
         }
     }
