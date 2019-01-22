@@ -1,38 +1,43 @@
+$mobileWidth: 768;
+$columns: 12;
+
+/* round decimal value to ceiling */
 @function decimal-ceil ($number, $digits: 0, $n: 1) {
-    /* round decimal value to ceiling */
     @for $i from 1 through $digits { $n: $n * 10; }
     @return ceil($number * $n) / $n;
 }
 
-/* GRIX default 12-column system */
+/* compile CSS width */
+@mixin getWidth($i){
+    width: decimal-ceil(percentage($i / $columns), 4);
+}
+
+/* GRIX default column system */
 .row {
     display: flex;
     flex-wrap: wrap;
 
     [class*="col-"] {
         box-sizing: border-box;
-        padding: 0 24px;
-        flex-grow: 1;
-
-        &[class*="-sm"]{
-            flex-grow: 0;
-        }
+        padding: 0 12px;
     }
 
-    @for $i from 1 through 12 {
-        .col-#{$i},
-        [class*="col-"].col-#{$i}-sm {
-            width: decimal-ceil(percentage($i / 12), 4);
+    @for $i from 1 through $columns {
+        .col-#{$i} {
+            @include getWidth($i)
         }
     }
 }
 
-/* mobile 12-column system */
-@media(max-width:768px){
+/* mobile column system */
+@media(max-width: $mobileWidth + "px"){
     .row {
-        @for $i from 1 through 12 {
+        @for $i from 1 through $columns {
             .col-#{$i} {
                 width: 100%;
+            }
+            [class*="col-"].col-#{$i}-sm {
+                @include getWidth($i)
             }
         }
     }
