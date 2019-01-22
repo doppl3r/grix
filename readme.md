@@ -4,12 +4,25 @@ GRIX is a simple grid system that uses flex to arrange HTML elements.
 
 Listed below are instructions for compiling a *```.scss```* files into a *```.css```* file. In this example, we will compile *```grix.scss```* to *```grix.css```*. The newly compiled CSS file will only include the compressed styling.
 
-## Libraries
+## Installation
 
- - Node.js
- - node-sass
+Include link in the ```<head>``` element.
+```
+<link href="/css/grix.css" rel="stylesheet">
+```
+Include ```row``` and ```column``` classes for parent and children elements.
+```
+<div class="row">
+    <div class="col-6">
+        <h1>left</h1>
+    </div>
+    <div class="col-6">
+        <h1>right</h1>
+    </div>
+</div>
+```
 
-## Installation Instructions
+## Compiler Requirements
 
  - Download & install [Node.js](https://nodejs.org/en/download/)
  - Install *```node-sass```* via command line: *```npm install -g node-sass```*
