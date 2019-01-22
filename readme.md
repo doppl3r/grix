@@ -2,13 +2,11 @@
 
 GRIX is a simple grid system that uses flex to arrange HTML elements.
 
-Listed below are instructions for compiling a *```.scss```* files into a *```.css```* file. In this example, we will compile *```grix.scss```* to *```grix.css```*. The newly compiled CSS file will only include the compressed styling.
-
 ## Installation
 
 Include link in the ```<head>``` element.
 ```
-<link href="/css/grix.css" rel="stylesheet">
+<link href="css/grix.css" rel="stylesheet">
 ```
 Include ```row``` and ```column``` classes for parent and children elements.
 ```
@@ -28,6 +26,8 @@ Include ```row``` and ```column``` classes for parent and children elements.
  - Install *```node-sass```* via command line: *```npm install -g node-sass```*
 
 ## Compiler Instructions
+
+Listed below are instructions for compiling a *```.scss```* files into a *```.css```* file. In this example, we will compile *```grix.scss```* to *```grix.css```*. The newly compiled CSS file will only include the compressed styling.
 
  - How to Manually Compile SCSS to CSS:
    - Open command line within the root folder
