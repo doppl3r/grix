@@ -1,0 +1,18 @@
+/* 12-grid system */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    [class*="col-"] { box-sizing: border-box; padding: 0 24px; }
+    @for $i from 1 through 12 {
+        .col-#{$i},
+        .col-#{$i}-sm { width: percentage($i / 12); }
+    }
+}
+
+@media(max-width:768px){
+    .row {
+        @for $i from 1 through 12 {
+            .col-#{$i} { width: 100%; }
+        }
+    }
+}
