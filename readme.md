@@ -23,11 +23,11 @@ Include ```row``` and ```column``` classes for parent and children elements
 </div>
 ```
 
-**Optional**: You can use ```class="col"``` if you prefer to use a generic list of equal columns.
+**Optional**: You can use a default column if you prefer to use a generic list of equal columns. Ex:  ```class="col"```
 
 ### Advanced Layout
 
-To change column widths for mobile views, append ```'-m'``` to a column class:
+To change column widths for mobile views, append ```-m``` to a column class:
 ```
 <div class="row">
     <div class="col-6 col-4-m">
@@ -39,7 +39,7 @@ To change column widths for mobile views, append ```'-m'``` to a column class:
 </div>
 ```
 
-**Optional**: You can force a width by only using the ```-m``` class. Ex: ```class="col-4-m"```
+**Optional**: You can force a width on both views by only using the ```-m``` class. Ex: ```class="col-4-m"```
 
 ## Preprocessor Requirements
 
