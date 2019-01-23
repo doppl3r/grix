@@ -8,50 +8,32 @@ $fillColumn: true;
     @return ceil($number * $n) / $n;
 }
 
-@function getWidth($i) {
-    @return decimal-ceil(percentage($i / $columns), 4);
-}
-
-/* compile CSS width */
-@mixin setWidth($i) {
-    width: getWidth($i);
+/* a: prepend, b: append: v: value */
+@mixin writeColumns($a: '', $b: '', $v: null){
+    $value: $v;
+    @for $i from 1 through $columns {
+        $value: if($v, $value, percentage(decimal-ceil(($i / $columns), 6)));
+        #{$a}#{$i}#{$b} {
+            width: $value;
+        }
+    }
 }
 
 /* GRIX default column system */
 .row {
     display: flex;
     flex-wrap: wrap;
-
-    [class*="col-"] {
-        box-sizing: border-box;
-        padding: 0 12px;
-        flex-grow: if($fillColumn, 1, 0);
-    }
-
-    @for $i from 1 through $columns {
-        .col-#{$i}-m {
-            @include setWidth($i)
-        }
-    }
-    @for $i from 1 through $columns {
-        .col-#{$i} {
-            @include setWidth($i)
-        }
-    }
 }
+[class*="col-"] {
+    box-sizing: border-box;
+    padding: 0 12px;
+    flex-grow: if($fillColumn, 1, 0);
+}
+@include writeColumns('.col-', '-m');
+@include writeColumns('.col-');
 
 /* mobile column system */
 @media(max-width: $mobileWidth + "px") {
-    .row {
-        @for $i from 1 through $columns {
-            [class*="col-"].col-#{$i}-m {
-                @include setWidth($i)
-            }
-        }
-        @for $i from 1 through $columns {
-            .col-#{$i} {
-                width: 100%;
-            }
-        }
-    }
+    @include writeColumns('[class*="col-"].col-', '-m');
+    @include writeColumns('.col-', '', 100%);
 }
