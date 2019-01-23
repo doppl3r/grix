@@ -1,6 +1,6 @@
 # GRIX
 
-GRIX is a simple **gri**d system that uses fle**x** to arrange HTML elements.
+GRIX is a simple grid system that uses flex to arrange HTML elements.
 
 ## Setup
 
@@ -24,7 +24,7 @@ Include ```row``` and ```column``` classes for parent and children elements:
 
 ### Advanced Layout
 
-Append ```'-m'``` to the target column to maintain width on mobile views. This example will be ```25%``` on the left, and ```75%``` on the right for desktop views, yet ```50%``` on both columns for mobile devices:
+To change column widths for mobile views, append ```'-m'``` to the column class:
 ```
 <div class="row">
     <div class="col-3 col-6-m">
