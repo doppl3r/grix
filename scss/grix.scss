@@ -8,9 +8,13 @@ $fillColumn: true;
     @return ceil($number * $n) / $n;
 }
 
+@function getWidth($i) {
+    @return decimal-ceil(percentage($i / $columns), 4);
+}
+
 /* compile CSS width */
-@mixin setWidth($i){
-    width: decimal-ceil(percentage($i / $columns), 4);
+@mixin setWidth($i) {
+    width: getWidth($i);
 }
 
 /* GRIX default column system */
@@ -25,6 +29,11 @@ $fillColumn: true;
     }
 
     @for $i from 1 through $columns {
+        .col-#{$i}-m {
+            @include setWidth($i)
+        }
+    }
+    @for $i from 1 through $columns {
         .col-#{$i} {
             @include setWidth($i)
         }
@@ -32,14 +41,16 @@ $fillColumn: true;
 }
 
 /* mobile column system */
-@media(max-width: $mobileWidth + "px"){
+@media(max-width: $mobileWidth + "px") {
     .row {
+        @for $i from 1 through $columns {
+            [class*="col-"].col-#{$i}-m {
+                @include setWidth($i)
+            }
+        }
         @for $i from 1 through $columns {
             .col-#{$i} {
                 width: 100%;
-            }
-            [class*="col-"].col-#{$i}-m {
-                @include setWidth($i)
             }
         }
     }
