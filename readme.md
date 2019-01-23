@@ -53,6 +53,7 @@ Listed below are instructions for compiling a *```.scss```* files into a *```.cs
 
 GRIX can be customized to match your most unique design layouts. Listed below are various options to use prior to processing to CSS:
 
- - ```$mobileWidth``` - Media query width. The default value is ```'12'```.
- - ```$columns``` - Column count. The default value is ```'768'```.
- - ```$fillColumn``` - Fill column space if available. The default value is ```'true'```.
+ - ```$columns``` - Number of columns. The default value is ```12```.
+ - ```$padding``` - Horizontal padding. The default value is ```12px```.
+ - ```$mobileWidth``` - Media query width. The default value is ```768px```.
+ - ```$columnGrow``` - Column expanding behavior for set widths. The default value is ```true```.

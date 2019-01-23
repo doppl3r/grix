@@ -1,6 +1,7 @@
-$mobileWidth: 768;
 $columns: 12;
-$fillColumn: true;
+$padding: 12px;
+$mobileWidth: 768px;
+$columnGrow: true;
 
 /* round decimal value to ceiling */
 @function decimal-ceil ($number, $digits: 0, $n: 1) {
@@ -24,16 +25,22 @@ $fillColumn: true;
     display: flex;
     flex-wrap: wrap;
 }
-[class*="col-"] {
+[class*="col"] {
     box-sizing: border-box;
-    padding: 0 12px;
-    flex-grow: if($fillColumn, 1, 0);
+    padding: 0 $padding;
+    flex-grow: if($columnGrow, 1, 0);
+}
+.col {
+    -ms-flex-preferred-size: 0;
+    -ms-flex-positive: 1;
+    flex: 1 0 0;
+    width: 100%;
 }
 @include writeColumns('.col-', '-m');
 @include writeColumns('.col-');
 
 /* mobile column system */
-@media(max-width: $mobileWidth + "px") {
+@media(max-width: $mobileWidth) {
     @include writeColumns('[class*="col-"].col-', '-m');
     @include writeColumns('.col-', '', 100%);
 }

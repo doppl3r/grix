@@ -5,8 +5,8 @@
         <link href="css/grix.css" rel="stylesheet">
         <style>
             body {
-                background-color: #333;
-                color: #ccc;
+                background-color: #1e1e1e;
+                color: #f2f2f2;
                 font-family: Arial;
                 font-size: 12px;
                 margin: auto;
@@ -19,13 +19,13 @@
                 margin-bottom: 12px;
                 overflow: hidden;
             }
-            .row [class*="col-"] {
-                background-color: #222;
-                height: 32px;
-                line-height: 32px;
+            .row [class*="col"] {
+                background-color: #333333;
+                padding-top: 12px;
+                padding-bottom: 12px;
             }
-            .row [class*="col-"]:nth-of-type(even){
-                background-color: #111;
+            .row [class*="col"]:nth-of-type(even){
+                background-color: #252526;
             }
         </style>
     </head>
@@ -54,6 +54,10 @@
         <div class="row">
             <div class="col-6 col-4-m">.col-6 .col-4-m</div>
             <div class="col-6 col-8-m">.col-6 .col-8-m</div>
+        </div>
+        <div class="row">
+            <div class="col">.col</div>
+            <div class="col">.col</div>
         </div>
         <div class="row">
             <div class="col-12">.col-12</div>
