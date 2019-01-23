@@ -36,7 +36,7 @@ $columns: 12;
             .col-#{$i} {
                 width: 100%;
             }
-            [class*="col-"].col-#{$i}-sm {
+            [class*="col-"].col-#{$i}-m {
                 @include setWidth($i)
             }
         }
