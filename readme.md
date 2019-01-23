@@ -2,19 +2,35 @@
 
 GRIX is a simple grid system that uses flex to arrange HTML elements.
 
-## Installation
+## Setup
 
-Include link in the ```<head>``` element.
+### Basic Layout
+
+Include link in the ```<head>``` element:
 ```
 <link href="css/grix.css" rel="stylesheet">
 ```
-Include ```row``` and ```column``` classes for parent and children elements.
+Include ```row``` and ```column``` classes for parent and children elements:
 ```
 <div class="row">
     <div class="col-6">
         <h1>left</h1>
     </div>
     <div class="col-6">
+        <h1>right</h1>
+    </div>
+</div>
+```
+
+### Advanced Layout
+
+Append ```'-sm'``` to the target column to maintain width on mobile views. This example will be ```25%``` on the left, and ```75%``` on the right for desktop views, yet ```50%``` on both columns for mobile devices:
+```
+<div class="row">
+    <div class="col-3 col-6-sm">
+        <h1>left</h1>
+    </div>
+    <div class="col-9 col-6-sm">
         <h1>right</h1>
     </div>
 </div>
