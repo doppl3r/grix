@@ -1,5 +1,6 @@
 $mobileWidth: 768;
 $columns: 12;
+$fillColumn: true;
 
 /* round decimal value to ceiling */
 @function decimal-ceil ($number, $digits: 0, $n: 1) {
@@ -20,6 +21,7 @@ $columns: 12;
     [class*="col-"] {
         box-sizing: border-box;
         padding: 0 12px;
+        flex-grow: if($fillColumn, 1, 0);
     }
 
     @for $i from 1 through $columns {
