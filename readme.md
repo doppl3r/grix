@@ -10,7 +10,8 @@ Include link in the ```<head>``` element:
 ```
 <link href="css/grix.css" rel="stylesheet">
 ```
-Include ```row``` and ```column``` classes for parent and children elements:
+Include ```row``` and ```column``` classes for parent and children elements
+
 ```
 <div class="row">
     <div class="col-6">
@@ -21,20 +22,24 @@ Include ```row``` and ```column``` classes for parent and children elements:
     </div>
 </div>
 ```
+
+**Optional**: You can use ```class="col"``` if you prefer to use a generic list of equal columns.
 
 ### Advanced Layout
 
-To change column widths for mobile views, append ```'-m'``` to the column class:
+To change column widths for mobile views, append ```'-m'``` to a column class:
 ```
 <div class="row">
-    <div class="col-3 col-6-m">
+    <div class="col-6 col-4-m">
         <h1>left</h1>
     </div>
-    <div class="col-9 col-6-m">
+    <div class="col-6 col-8-m">
         <h1>right</h1>
     </div>
 </div>
 ```
+
+**Optional**: You can force a width by only using the ```-m``` class. Ex: ```class="col-4-m"```
 
 ## Preprocessor Requirements
 
@@ -49,11 +54,11 @@ Listed below are instructions for compiling a *```.scss```* files into a *```.cs
    - Open command line within the root folder
    - Run: *```node-sass scss/grix.scss css/grix.css --output-style compressed```*
 
-## Options
+## Preprocessor Options
 
-GRIX can be customized to match your most unique design layouts. Listed below are various options to use prior to processing to CSS:
+GRIX can be customized to match your most unique design layouts. Listed below are various preprocessor options:
 
- - ```$columns``` - Number of columns. The default value is ```12```.
- - ```$padding``` - Horizontal padding. The default value is ```12px```.
- - ```$mobileWidth``` - Media query width. The default value is ```768px```.
- - ```$columnGrow``` - Column expanding behavior for set widths. The default value is ```true```.
+ - ```$columns``` - Number of columns. The default value is ```12```
+ - ```$padding``` - Horizontal padding. The default value is ```12px```
+ - ```$mobileWidth``` - Media query width. The default value is ```768px```
+ - ```$columnGrow``` - Column expanding behavior for set widths. The default value is ```true```
