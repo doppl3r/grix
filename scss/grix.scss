@@ -8,7 +8,7 @@ $columns: 12;
 }
 
 /* compile CSS width */
-@mixin getWidth($i){
+@mixin setWidth($i){
     width: decimal-ceil(percentage($i / $columns), 4);
 }
 
@@ -24,7 +24,7 @@ $columns: 12;
 
     @for $i from 1 through $columns {
         .col-#{$i} {
-            @include getWidth($i)
+            @include setWidth($i)
         }
     }
 }
@@ -37,7 +37,7 @@ $columns: 12;
                 width: 100%;
             }
             [class*="col-"].col-#{$i}-sm {
-                @include getWidth($i)
+                @include setWidth($i)
             }
         }
     }
