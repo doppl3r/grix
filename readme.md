@@ -1,6 +1,6 @@
 # GRIX
 
-GRIX is a simple grid system that uses flex to arrange HTML elements.
+GRIX is a simple grid system that uses CSS Flex to dynamically arrange HTML elements.
 
 ## Setup
 
