@@ -2,6 +2,8 @@
 
 GRIX is a simple grid system that uses CSS Flexbox to dynamically arrange HTML elements.
 
+[DEMO](https://raw.githack.com/doppl3r/grix/master/index.html)
+
 ## Setup
 
 ### Basic Layout
@@ -61,4 +63,5 @@ GRIX can be customized to match your most unique design layouts. Listed below ar
  - ```$columns``` - Number of columns. The default value is ```12```
  - ```$padding``` - Horizontal padding. The default value is ```12px```
  - ```$mobileWidth``` - Media query width. The default value is ```768px```
+ - ```$suffix``` - Media query suffix. The default value is ```-m```
  - ```$columnGrow``` - Column expanding behavior for set widths. The default value is ```true```
