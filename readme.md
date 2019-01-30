@@ -63,5 +63,5 @@ GRIX can be customized to match your most unique design layouts. Listed below ar
  - ```$columns``` - Number of columns. The default number value is ```12```
  - ```$padding``` - Horizontal padding. The default string value is ```12px```
  - ```$mobileWidth``` - Media query width. The default string value is ```768px```
- - ```$suffix``` - Media query suffix. The default string value is ```-m```
  - ```$columnGrow``` - Column expanding behavior for set widths. The default boolean value is ```true```
+ - ```$suffix``` - Media query suffix. The default string value is ```-m```
