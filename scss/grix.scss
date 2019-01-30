@@ -1,8 +1,9 @@
+/* default variables */
 $columns: 12;
 $padding: 12px;
 $mobileWidth: 768px;
-$suffix: -m;
 $columnGrow: true;
+$suffix: -m;
 
 /* round decimal value to ceiling */
 @function decimal-ceil ($number, $digits: 0, $n: 1) {

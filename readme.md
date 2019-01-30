@@ -2,7 +2,7 @@
 
 GRIX is a simple grid system that uses CSS Flexbox to dynamically arrange HTML elements.
 
-[DEMO](https://raw.githack.com/doppl3r/grix/master/index.html)
+[**DEMO**](https://raw.githack.com/doppl3r/grix/master/index.html)
 
 ## Setup
 
