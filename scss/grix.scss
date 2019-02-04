@@ -1,8 +1,8 @@
 /* default variables */
 $columns: 12;
-$padding: 12px;
+$flexGrow: 0;
 $mobileWidth: 768px;
-$columnGrow: false;
+$padding: 12px;
 $suffix: -m;
 
 /* round decimal value to ceiling */
@@ -30,7 +30,7 @@ $suffix: -m;
 [class*="col"] {
     box-sizing: border-box;
     padding: 0 $padding;
-    flex-grow: if($columnGrow, 1, 0);
+    flex-grow: $flexGrow;
 }
 .col {
     -ms-flex-preferred-size: 0;
