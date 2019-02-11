@@ -27,15 +27,17 @@ $suffix: -m;
     display: flex;
     flex-wrap: wrap;
 }
-[class*="col"] {
+[class*="col-"] {
     box-sizing: border-box;
     padding: 0 $padding;
     flex-grow: $flexGrow;
 }
 .col {
+    box-sizing: border-box;
     -ms-flex-preferred-size: 0;
     -ms-flex-positive: 1;
     flex: 1 0 0;
+    padding: 0 $padding;
     width: 100%;
 }
 @include writeColumns('.col-', $suffix);
