@@ -16,7 +16,7 @@ $suffix: -m;
     $value: $v;
     @for $i from 1 through $columns {
         $value: if($v, $value, percentage(decimal-ceil(($i / $columns), 6)));
-        #{$a}#{$i}#{$b} {
+        .row > #{$a}#{$i}#{$b} {
             width: $value;
         }
     }
@@ -27,12 +27,12 @@ $suffix: -m;
     display: flex;
     flex-wrap: wrap;
 }
-[class*="col-"] {
+.row > [class*="col-"] {
     box-sizing: border-box;
     padding: 0 $padding;
     flex-grow: $flexGrow;
 }
-.col {
+.row > .col {
     box-sizing: border-box;
     -ms-flex-preferred-size: 0;
     -ms-flex-positive: 1;
