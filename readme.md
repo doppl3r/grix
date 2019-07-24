@@ -6,7 +6,7 @@ GRIX is a simple grid system that uses CSS Flexbox to dynamically arrange HTML e
 
 ## Case Study
 
-Trusted by 10+ franchising companies across the world including Cold Stone Creamery, Blimpie, Baja Fresh, Pinkberry, SweetFrog, Grabbagreen, Mucho Burrito, Ginger Sushi, Planet Smoothie, Maui Wowi and many more.
+Trusted by multimillion dollar franchising companies across the world including Cold Stone Creamery, Blimpie, Baja Fresh, Pinkberry, SweetFrog, Grabbagreen, Mucho Burrito, Ginger Sushi, Planet Smoothie, Maui Wowi and many more.
 
 ## Setup
 
